@@ -1,0 +1,26 @@
+<div *ngIf="data.caller=='finished'" class="container" [dir]="'rtl'" style="text-align: center;"
+    [ngClass]="data.darkmode? 'dark-container':'light-container' ">
+    <h2 cdkFocusRegionstart style="width: 100%;text-align: center;margin-top: 15px;font-size: 24px;font-weight: bold;line-height: 1.3em;">
+        تقبل الله منا ومنكم صالح الاعمال
+    </h2>
+    <br>
+    <button (click)="dialogRef.close('end') " style="width: 100px;text-align: center;font-size: 16px;font-weight: bold;" [mat-dialog-close]="true" [ngClass]="data.darkmode? 'bill-card-dark header-shadow-dark':'bill-card-light header-shadow-light' " mat-flat-button class="bill-card">
+        انهاء
+    </button>
+</div>
+
+<div *ngIf="data.caller=='back'" class="container" [dir]="'rtl'" style="text-align: center;"
+    [ngClass]="data.darkmode? 'dark-container':'light-container' ">
+    <h2 cdkFocusRegionstart style="width: 100%;text-align: center;margin-top: 15px;font-size: 24px;font-weight: bold;line-height: 1.6em;">
+        هل تريد حفظ العدد الحالي لتكمل من حيث توقفت
+    </h2>
+    <br>
+    <button  (click)="dialogRef.close('end') " style="margin: 0 10px 0 10px; width: 100px;text-align: center;font-size: 16px;font-weight: bold;box-shadow: none; background: transparent;" [mat-dialog-close]="true" [ngClass]="data.darkmode? 'bill-card-dark header-shadow-dark':'bill-card-light header-shadow-light' " mat-flat-button class="bill-card">
+        لا
+    </button>
+    <button (click)="dialogRef.close('save') " style="width: fit-content;text-align: center;font-size: 16px;font-weight: bold; " [mat-dialog-close]="true" [ngClass]="data.darkmode? 'bill-card-dark header-shadow-dark':'bill-card-light header-shadow-light' " mat-flat-button class="bill-card">
+        نعم
+        ،
+        سأكمل لاحقا          
+    </button>
+</div>

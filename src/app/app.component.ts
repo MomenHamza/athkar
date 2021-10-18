@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-
+import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +6,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'esnad';
-}
+  offline: boolean;
+
+  onNetworkStatusChange(): void {
+    this.offline = !navigator.onLine;
+    console.log('offline ' + this.offline);
+  }
+  
+  ngAfterViewInit() {
+    window.addEventListener('online',  this.onNetworkStatusChange.bind(this));
+    window.addEventListener('offline', this.onNetworkStatusChange.bind(this));
+}}

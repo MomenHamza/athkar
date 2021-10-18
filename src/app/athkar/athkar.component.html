@@ -1,0 +1,196 @@
+<div *ngIf="athkar_sc" class="container" [dir]="'ltr'" style="text-align: center;background-image: none;" [ngClass]="darkmode? 'dark-container':'light-container' " >
+    <div [ngClass]="darkmode? 'dark-container header-shadow-dark':'light-container header-shadow-light' " style="padding: 20px; position: sticky;top: 0; z-index: 1;width: 100%;background-image: none;">
+        <!-- <mat-icon *ngIf="title == 'أذكار المساء'" class="background" >
+            nights_stay
+        </mat-icon>
+        <mat-icon *ngIf="title =='أذكار الصباح'" class="background">
+            light_mode
+        </mat-icon>
+        <mat-icon *ngIf="title =='أذكار النوم'" class="background" style="font-size: 120px;top: 5px;">
+            hotel
+        </mat-icon>
+        <mat-icon *ngIf="title =='أذكار الصلاة'" class="background" style="font-size: 180px;top: 10px;">
+            mosque
+        </mat-icon> -->
+
+        
+        <!-- <img *ngIf="!dark_mode && title=='الصلاة علي رسول الله'" style="top: -92px;
+        right: 60%;
+        width: 180px;
+        position: absolute;
+        opacity: .3;" 
+        src="assets/salah_light.png" alt=""> 
+    
+        <img *ngIf="dark_mode && title=='الصلاة علي رسول الله'" style="top: -92px;
+        right: 60%;
+        width: 180px;
+        position: absolute;
+        opacity: .4;" 
+        src="assets/salah_dark.png" alt="">
+        
+    -->
+
+    <!-- top: -23px;
+    right: 60%;
+    width: 349px; -->
+        
+        <!-- <img *ngIf="!dark_mode" style="top: -92px;
+        right: 60%;
+        width: 180px;
+        position: absolute;
+        opacity: .3;" 
+        src="assets/light_bg.svg" alt="">
+        
+        <img *ngIf="dark_mode && title=='الصلاة علي رسول الله'" style="top: -92px;
+        right: 60%;
+        width: 180px;
+        position: absolute;
+        opacity: .4;" 
+        src="assets/dark_bg.svg" alt=""> -->
+
+        <h2  style="width: 100%;text-align: center;margin-top: 15px;font-size: 26px;font-weight: bold;">
+            {{title}}  
+        </h2>
+        <button style="position: absolute; top: 5px;right: 5px;" mat-icon-button (click)="openDialog('back')">
+            <mat-icon >
+                arrow_forward
+            </mat-icon>
+        </button>
+
+        <button style="position: absolute; bottom: 24px;right: 10px;" mat-icon-button (click)="togelDarkMode()">
+            <mat-icon *ngIf="!darkmode">
+                dark_mode
+            </mat-icon>
+            <mat-icon *ngIf="darkmode">
+                <!-- light_mode -->
+                <!-- light -->
+                lightbulb
+                <!-- wb_incandescent -->
+            </mat-icon>
+        </button>
+        <button class="settings" style="background: #FBE8BE;" mat-flat-button (click)="togelTashkeel()">
+            تشڪيل
+        </button>
+        <button class="settings" mat-flat-button (click)="decFont()">
+            خط اصغر 
+        </button>
+        <button class="settings" mat-flat-button (click)="incFont()">
+                خط اڪبر         
+        </button>
+    </div>
+<br>
+<button
+ [dir]="'rtl'" [ngClass]="darkmode? 'bill-card-dark':'bill-card-light header-shadow-light' "
+[ngStyle]="{opacity:(1-((.6)*(thikr.counter/thikr.times))) }"
+[disableRipple]="true" mat-flat-button [disabled]="thikr.counter==thikr.times" *ngFor="let thikr of athkar" class="bill-card" (click)="count(thikr)">
+    <h5 [ngStyle]="{'font-size':fontSize+'px',lineHeight:(removeTashkeelFlag?'1.55em':' 1.65em')}">
+        {{removeTashkeelFlag?removeTashkeel(thikr.thikr):thikr.thikr }}    
+    </h5>
+    <p [ngStyle]="{'font-size':fontSize*.72+'px' } "  *ngIf="thikr.description !=''">
+        {{thikr.description}}
+    </p>
+    <div  class="row" style="margin-top: 12px; margin-bottom: 0px;height: 18px ;line-height: 18px;font-weight: bold;">
+      <div class="col-6" style="text-align: start;font-size: 16px;">
+        <div matRipple  class="counter">
+           <b>
+            {{convNum( thikr.counter ) }}
+           </b>
+        </div>
+      </div>
+      <div class="col-6" style="text-align: end;font-size: 16px;">
+        {{
+            thikr.times == 1 ?
+            'مرة واحدة' 
+            : 
+            thikr.times > 2 && thikr.times <11 ?
+            convNum( thikr.times ) + ' مرات '  
+            :
+            convNum(thikr.times )+ ' مرة ' 
+        }}
+      </div>
+    </div>
+  </button>
+</div>
+
+
+<div *ngIf="home_sc" class="container" [dir]="'ltr'" style="text-align: center;height: fit-content; "
+    [ngClass]="darkmode? 'dark-container':'light-container' "
+    [ngStyle]="{'background':darkmode?'#363636':'#fdfdfd'}"
+    >
+    <h2 style="width: 100%;text-align: center;padding: 45px 0 35px 0;font-size: 34px;font-weight: bold;">
+        واذكر ربك كثيرا
+    </h2>
+
+    <button [ngClass]="darkmode? 'bill-card-dark':'bill-card-light header-shadow-light' " mat-flat-button
+        class="bill-card" (click)="setAthkar(sabaah,'sabaah'); title='أذكار الصباح' ">
+        <h5 [ngStyle]="{'font-size':'26px',lineHeight:'1.3em'}">
+            اذكار الصباح
+        </h5>        
+        <mat-icon class="background" style="right: 75%;font-size: 65px;top: 20px;">
+            light_mode
+        </mat-icon>
+        <p style="margin-bottom: 0;font-size:17px;">
+            من بعد صلاة الفجر الي شروق الشمس
+        </p>
+    </button>
+    <button [ngClass]="darkmode? 'bill-card-dark':'bill-card-light header-shadow-light' " mat-flat-button
+        class="bill-card" (click)="setAthkar(masaa,'masaa') ; title='أذكار المساء'">
+        <h5 [ngStyle]="{'font-size':'26px',lineHeight:'1.3em'}">
+            اذكار المساء
+        </h5>
+        <mat-icon class="background" style="right: 75%;font-size: 65px;top: 20px;" >
+           dark_mode
+        </mat-icon>
+        <p style="margin-bottom: 0;font-size:17px;">
+            من بعد صلاة العصر الي غروب الشمس
+        </p>
+    </button>
+    <button [ngClass]="darkmode? 'bill-card-dark':'bill-card-light header-shadow-light' " mat-flat-button
+        class="bill-card" (click)="setAthkar(sleep,'sleep') ; title='أذكار النوم'">
+        <h5 [ngStyle]="{'font-size':'26px',lineHeight:'1.3em'}">
+            اذكار النوم
+        </h5>
+        <mat-icon class="background" style="right: 75%;font-size: 55px;top: 20px;">
+            hotel
+        </mat-icon>
+        <p style="margin-bottom: 0;font-size:17px;">
+            حصن من الشيطان
+        </p>
+    </button>
+    <button [ngClass]="darkmode? 'bill-card-dark':'bill-card-light header-shadow-light' " mat-flat-button
+        class="bill-card" (click)="setAthkar(salah,'salah') ; title='أذكار الصلاة'">
+        <h5 [ngStyle]="{'font-size':'26px',lineHeight:'1.3em'}">
+            اذكار الصلاة
+        </h5>
+        <mat-icon class="background" style="top: 20px;right: 75%;font-size: 55px;">
+            mosque
+        </mat-icon>
+        <p style="margin-bottom: 0;font-size:17px;">
+            معقبات لا يخيب قائلهن
+        </p>
+    </button>
+    
+    <button [ngClass]="darkmode? 'bill-card-dark':'bill-card-light header-shadow-light' " mat-flat-button
+        class="bill-card" (click)="setAthkar(salahMohamed,'salahMohamed') ; title='الصلاة علي رسول الله'">
+        <h5 [ngStyle]="{'font-size':'26px',lineHeight:'1.3em'}">
+            الصلاة علي رسول الله
+        </h5>
+        <img *ngIf="!dark_mode" style="top: -10px;
+        right: 75%;
+        width: 65px;
+        position: absolute;
+        opacity: .3;" 
+        src="assets/salah_light.png" alt="">
+        
+        <img *ngIf="dark_mode" style="top: -10px;
+        right: 75%;
+        width: 65px;
+        position: absolute;
+        opacity: .4;" 
+        src="assets/salah_dark.png" alt="">
+        <p style="margin-bottom: 0;font-size:17px;">
+            <!-- مَن صلى عَلَيَّ واحدةً ، صلى اللهُ عليه بها عَشْرًا -->
+            من صلي علي واحدة صلي الله عليه بها عشرا
+        </p>
+    </button>
+</div>

@@ -1,0 +1,170 @@
+.container {
+  text-align: center;
+  margin: 0;
+  min-height: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  max-width: 100%;
+  padding: 0;
+}
+.light-container {
+  background: #e9e5e5;
+  color: #000;
+
+  /* background-image: url(../../assets/light_bg.svg);
+  background-blend-mode: color-burn;
+  background-position-x: center;
+  background-size: 100vw; */
+}
+.dark-container {
+  /* background: #121212; */
+  background: #363636;
+  color: #e3dfdf;
+  /* background-image: url(../../assets/dark_bg.svg);
+  background-blend-mode: color-burn;
+  background-position-x: center;
+  background-size: 100vw; */
+}
+.light-container .background {
+  color: #b7b7b7;
+  width: 100%;
+  opacity: 0.3;
+  position: absolute;
+  top: 5px;
+  font-size: 100px;
+  right: 35%;
+}
+.dark-container .background {
+  color: #f8f8f8;
+  width: 100%;
+  opacity: 0.2;
+  position: absolute;
+  top: 5px;
+  font-size: 100px;
+  right: 35%;
+}
+
+.header-shadow-light {
+  overflow: hidden;
+  box-shadow: 1px 2px 11px 1px hsl(0deg 0% 70% / 20%);
+}
+.header-shadow-dark {
+  overflow: hidden;
+  box-shadow: 1px 2px 11px 1px #00000033;
+}
+h5 {
+  white-space: normal;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 22px;
+  font-weight: bold;
+}
+.settings {
+  font-weight: bold;
+  margin: 5px;
+  z-index: 3;
+}
+p {
+  margin: -12px 0 30px 0;
+  white-space: normal;
+  color: #5c585c;
+  line-height: 1.3em;
+}
+.bill-card-dark p {
+  color: #c4c4c4;
+}
+.dark-container button:disabled {
+  /* background: #020202 !important; */
+  background: #3c3c3c !important;
+  color: #8b8989;
+}
+button:disabled {
+  /* color: #00000085 !important; */
+  background: #f8f8f8 !important;
+  opacity: 63%;
+  box-shadow: none;
+}
+
+.bill-card {
+  overflow: hidden;
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  margin: 5px auto 20px auto;
+  padding: 16px;
+  text-align: right;
+  outline: none;
+  font-size: 12px;
+  border-radius: 15px;
+}
+.bill-card-dark {
+  /* background: #363636; */
+  /* background:#383838;
+  color: #e3dfdf;
+  box-shadow: 1px 2px 11px 1px #00000033; */
+
+  background: #545353;
+  color: #e3dfdf;
+  box-shadow: 1px 2px 11px 1px hsl(0deg 0% 8% / 20%);
+}
+
+.bill-card-light {
+  background-color: #f8f8f8;
+  box-shadow: -6px 11px 11px -4px hsla(0, 0%, 70%, 0.2);
+  color: #170e36;
+}
+.counter {
+  width: 75px;
+  background: #fbe8be;
+  color: rgb(34, 5, 5);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  padding: 16px;
+  text-align: center;
+  border-radius: 50px 2px 15px 2px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* ----------------
+  Responsive
+  -------------------*/
+@media (min-width: 1200px) {
+}
+
+/* Medium screen : 992px. */
+@media only screen and (min-width: 1200px) and (max-width: 1360px) {
+}
+
+/* Medium screen : 992px. */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Tablet :768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .bills-container {
+    width: 90%;
+    /* height: 70vh; */
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+/* Large Mobile :480px. */
+@media only screen and (max-width: 767px) {
+  .bills-container {
+    width: 98%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: auto;
+  }
+}
+
+/* Small Mobile :320px. */
+@media only screen and (max-width: 479px) {
+}
+
+@media only screen and (max-width: 399px) {
+}
