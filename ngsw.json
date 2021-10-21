@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1634807970595,
+  "timestamp": 1634817811083,
   "index": "https://MomenHamza.github.io/athkar/index.html",
   "assetGroups": [
     {
@@ -12,8 +12,8 @@
       },
       "urls": [
         "https://MomenHamza.github.io/athkar/index.html",
-        "https://MomenHamza.github.io/athkar/main-es2015.fc4b10314c872f44df19.js",
-        "https://MomenHamza.github.io/athkar/main-es5.fc4b10314c872f44df19.js",
+        "https://MomenHamza.github.io/athkar/main-es2015.cbe9bc94178327e4fadc.js",
+        "https://MomenHamza.github.io/athkar/main-es5.cbe9bc94178327e4fadc.js",
         "https://MomenHamza.github.io/athkar/manifest.webmanifest",
         "https://MomenHamza.github.io/athkar/polyfills-es2015.b822b46becf78518fe17.js",
         "https://MomenHamza.github.io/athkar/polyfills-es5.fdc2a009e91ed020c392.js",
@@ -513,10 +513,10 @@
     "https://MomenHamza.github.io/athkar/assets/light_bg.svg": "1a4b5ab753a80db127e52f4349f529afef3e1234",
     "https://MomenHamza.github.io/athkar/assets/salah_dark.png": "c742472de6afe3f48527b2a0336976fc19fc5db8",
     "https://MomenHamza.github.io/athkar/assets/salah_light.png": "c2c322c825e453a7d4136e1f9e37666c58b8723c",
-    "https://MomenHamza.github.io/athkar/index.html": "64f1aa096eb370dbc2a0e0e0495614cc403aae6e",
-    "https://MomenHamza.github.io/athkar/main-es2015.fc4b10314c872f44df19.js": "d3359e60141657d4b01bfecaddf52b37e632e3bf",
-    "https://MomenHamza.github.io/athkar/main-es5.fc4b10314c872f44df19.js": "b7537a501954311e849f9db0fe1b8cce5012e049",
-    "https://MomenHamza.github.io/athkar/manifest.webmanifest": "a6195cb917e765b55aaeeff3676da9e0dd474b14",
+    "https://MomenHamza.github.io/athkar/index.html": "7db46db0872a21235b80a77d59923a0e39987966",
+    "https://MomenHamza.github.io/athkar/main-es2015.cbe9bc94178327e4fadc.js": "5cd8f290ca8b95ef8addca42a42141f55fc0ed75",
+    "https://MomenHamza.github.io/athkar/main-es5.cbe9bc94178327e4fadc.js": "0820dac894c7d104aa4245594db30ea4dafc6ddb",
+    "https://MomenHamza.github.io/athkar/manifest.webmanifest": "512c294420cf5e5d5b17081bba6150c950307815",
     "https://MomenHamza.github.io/athkar/polyfills-es2015.b822b46becf78518fe17.js": "d373e0370dbfe91a44282ee31ce09348187b2fc2",
     "https://MomenHamza.github.io/athkar/polyfills-es5.fdc2a009e91ed020c392.js": "d1bef122a614b73229f396bc5cc123f640fb8f2d",
     "https://MomenHamza.github.io/athkar/runtime-es2015.a1ac991fc00ebf39524f.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",

@@ -5,7 +5,7 @@
   "background_color": "#e3dfdf",
   "display": "standalone",
   "scope": "./",
-  "start_url": "./",
+  "start_url": "./athkar",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
