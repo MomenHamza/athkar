@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { FinishedComponent } from '../finished/finished.component';
+import {version} from '../../../package.json';
 
 @Component({
   selector: 'app-athkar',
@@ -8,7 +9,7 @@ import { FinishedComponent } from '../finished/finished.component';
   styleUrls: ['./athkar.component.css']
 })
 export class AthkarComponent implements OnInit {
-
+  version: string=version;
   home_sc = true
   athkar_sc = false
 
@@ -19,7 +20,7 @@ export class AthkarComponent implements OnInit {
     localStorage.getItem("fontSize")?this.fontSize=Number(JSON.parse(localStorage.getItem("fontSize"))):26;
     localStorage.getItem("darkmode")?this.darkmode=(JSON.parse(localStorage.getItem("darkmode"))):false;
     localStorage.getItem("removeTashkeelFlag")?this.removeTashkeelFlag=(JSON.parse(localStorage.getItem("removeTashkeelFlag"))):false;   
-   }
+  }
   ngOnInit(): void {
   }
 

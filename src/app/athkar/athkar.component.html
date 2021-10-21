@@ -112,85 +112,85 @@
   </button>
 </div>
 
-
-<div *ngIf="home_sc" class="container" [dir]="'ltr'" style="text-align: center;height: fit-content; "
-    [ngClass]="darkmode? 'dark-container':'light-container' "
-    [ngStyle]="{'background':darkmode?'#363636':'#fdfdfd'}"
-    >
+<!-- [ngStyle]="{'background':darkmode?'#363636':'#fdfdfd'}" -->
+<div *ngIf="home_sc" class="container home" [dir]="'ltr'" style="text-align: center;height: fit-content; "
+    [ngClass]="darkmode? 'dark-container':'light-container' " >
     <h2 style="width: 100%;text-align: center;padding: 45px 0 35px 0;font-size: 34px;font-weight: bold;">
         واذكر ربك كثيرا
     </h2>
 
     <button [ngClass]="darkmode? 'bill-card-dark':'bill-card-light header-shadow-light' " mat-flat-button
         class="bill-card" (click)="setAthkar(sabaah,'sabaah'); title='أذكار الصباح' ">
-        <h5 [ngStyle]="{'font-size':'26px',lineHeight:'1.3em'}">
+        <h5 [ngStyle]="{'font-size':'22px',lineHeight:'1em'}">
             اذكار الصباح
         </h5>        
-        <mat-icon class="background" style="right: 75%;font-size: 65px;top: 20px;">
+        <mat-icon class="background" style="right: 75%;font-size: 65px;top: 10px;">
             light_mode
         </mat-icon>
-        <p style="margin-bottom: 0;font-size:17px;">
+        <p style="margin-bottom: 0;font-size:15px;">
             من بعد صلاة الفجر الي شروق الشمس
         </p>
     </button>
     <button [ngClass]="darkmode? 'bill-card-dark':'bill-card-light header-shadow-light' " mat-flat-button
         class="bill-card" (click)="setAthkar(masaa,'masaa') ; title='أذكار المساء'">
-        <h5 [ngStyle]="{'font-size':'26px',lineHeight:'1.3em'}">
+        <h5 [ngStyle]="{'font-size':'22px',lineHeight:'1em'}">
             اذكار المساء
         </h5>
-        <mat-icon class="background" style="right: 75%;font-size: 65px;top: 20px;" >
+        <mat-icon class="background" style="right: 75%;font-size: 65px;top: 10px;" >
            dark_mode
         </mat-icon>
-        <p style="margin-bottom: 0;font-size:17px;">
+        <p style="margin-bottom: 0;font-size:15px;">
             من بعد صلاة العصر الي غروب الشمس
         </p>
     </button>
     <button [ngClass]="darkmode? 'bill-card-dark':'bill-card-light header-shadow-light' " mat-flat-button
         class="bill-card" (click)="setAthkar(sleep,'sleep') ; title='أذكار النوم'">
-        <h5 [ngStyle]="{'font-size':'26px',lineHeight:'1.3em'}">
+        <h5 [ngStyle]="{'font-size':'22px',lineHeight:'1em'}">
             اذكار النوم
         </h5>
-        <mat-icon class="background" style="right: 75%;font-size: 55px;top: 20px;">
+        <mat-icon class="background" style="right: 75%;font-size: 55px;top: 10px;">
             hotel
         </mat-icon>
-        <p style="margin-bottom: 0;font-size:17px;">
+        <p style="margin-bottom: 0;font-size:15px;">
             حصن من الشيطان
         </p>
     </button>
     <button [ngClass]="darkmode? 'bill-card-dark':'bill-card-light header-shadow-light' " mat-flat-button
         class="bill-card" (click)="setAthkar(salah,'salah') ; title='أذكار الصلاة'">
-        <h5 [ngStyle]="{'font-size':'26px',lineHeight:'1.3em'}">
+        <h5 [ngStyle]="{'font-size':'22px',lineHeight:'1em'}">
             اذكار الصلاة
         </h5>
-        <mat-icon class="background" style="top: 20px;right: 75%;font-size: 55px;">
+        <mat-icon class="background" style="top: 10px;right: 75%;font-size: 55px;">
             mosque
         </mat-icon>
-        <p style="margin-bottom: 0;font-size:17px;">
+        <p style="margin-bottom: 0;font-size:15px;">
             معقبات لا يخيب قائلهن
         </p>
     </button>
     
     <button [ngClass]="darkmode? 'bill-card-dark':'bill-card-light header-shadow-light' " mat-flat-button
         class="bill-card" (click)="setAthkar(salahMohamed,'salahMohamed') ; title='الصلاة علي رسول الله'">
-        <h5 [ngStyle]="{'font-size':'26px',lineHeight:'1.3em'}">
+        <h5 [ngStyle]="{'font-size':'22px',lineHeight:'1em'}">
             الصلاة علي رسول الله
         </h5>
-        <img *ngIf="!dark_mode" style="top: -10px;
+        <img *ngIf="!dark_mode" style="top: -20px;
         right: 75%;
         width: 65px;
         position: absolute;
         opacity: .3;" 
         src="assets/salah_light.png" alt="">
         
-        <img *ngIf="dark_mode" style="top: -10px;
+        <img *ngIf="dark_mode" style="top: -20px;
         right: 75%;
         width: 65px;
         position: absolute;
         opacity: .4;" 
         src="assets/salah_dark.png" alt="">
-        <p style="margin-bottom: 0;font-size:17px;">
+        <p style="margin-bottom: 0;font-size:15px;">
             <!-- مَن صلى عَلَيَّ واحدةً ، صلى اللهُ عليه بها عَشْرًا -->
             من صلي علي واحدة صلي الله عليه بها عشرا
         </p>
     </button>
+    <span style="width: 100%;    position: sticky;display: block;bottom: 10px;font-size:10px;opacity: .5;left: 0;text-align: start;padding:0 15px;">V {{version}}
+    </span>
 </div>

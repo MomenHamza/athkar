@@ -1,6 +1,6 @@
 {
-  "name": "الأذكار",
-  "version": "1.0.0",
+  "name": "athkar",
+  "version": "1.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -34,7 +34,8 @@
     "@angular/cli": "~11.0.5",
     "@angular/compiler-cli": "~11.0.5",
     "@types/jasmine": "~3.6.0",
-    "@types/node": "^12.11.1",
+    "@types/node": "^8.9.5",
+    "@types/webpack-env": "^1.16.3",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",

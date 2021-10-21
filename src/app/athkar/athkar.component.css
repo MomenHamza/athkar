@@ -84,7 +84,10 @@ button:disabled {
   opacity: 63%;
   box-shadow: none;
 }
-
+.home .bill-card {
+  width: 80%;
+  min-width: 280px;
+}
 .bill-card {
   overflow: hidden;
   position: relative;
